@@ -3,7 +3,7 @@
  * Plugin Name: Vinyl Marketing Site Customizations
  * Plugin URI: 
  * Description: 
- * Version: 0.0.5
+ * Version: 0.0.6
  * Author: Randal Pope
  * Author URI: https://randal.io
  * License: GPL-2.0+
@@ -11,6 +11,11 @@
  * Text Domain: vm-custom
  */
 
+
+function plugin_version(){
+	$version = '0.0.6';
+	return $version;
+}
 
 
 // If this file is called directly, abort.
@@ -22,14 +27,14 @@ if (!defined('WPINC')) {
  * Enable block scripts for adding block styles.
  */
 function vm_custom_enable_wp_block_scripts() {
-	$version = '0.0.5';
+
 	if ( get_option( 'vm-custom-wp-block-scripts', 1 ) == 1 ) {
 		
 		wp_enqueue_script(
 			'gutenberg-starter-editor', 
 			plugin_dir_url( __FILE__ ) . '/dist/js/editor.js', 
 			array( 'wp-blocks', 'wp-dom' ), 
-			$version,
+			plugin_version(),
 			true
 		);
 		
@@ -61,14 +66,14 @@ function vm_custom_enable_frontend_assets() {
 		'locomotive-scroll-css',
 		plugin_dir_url(__FILE__) . 'dist/css/locomotive-scroll.min.css',
 		array(),
-		$version
+		plugin_version()
 	);
 
 	wp_enqueue_script(
 		'locomotive-scroll-js',
 		plugin_dir_url(__FILE__) . 'dist/js/locomotive-scroll.min.js',
 		array(),
-		$version,
+		plugin_version(),
 		true
 	);
 
@@ -76,7 +81,7 @@ function vm_custom_enable_frontend_assets() {
 		'follow-js',
 		plugin_dir_url(__FILE__) . 'dist/js/follow.min.js',
 		array(),
-		$version,
+		plugin_version(),
 		true
 	);
 
@@ -84,13 +89,13 @@ function vm_custom_enable_frontend_assets() {
 		'fidato-frontend',
 		plugin_dir_url(__FILE__) . 'dist/js/main.js',
 		array('jquery', 'locomotive-scroll-js', 'follow-js'),
-		$version,
+		plugin_version(),
 		true
 	);
 
 
-	wp_enqueue_style('main-styles', plugin_dir_url( __FILE__ ) . 'dist/css/main.css');
-	wp_enqueue_style('icon-styles', plugin_dir_url( __FILE__ ) . 'dist/css/fonts.css');
+	wp_enqueue_style('main-styles', plugin_dir_url( __FILE__ ) . 'dist/css/main.css', array(),  plugin_version());
+	wp_enqueue_style('icon-styles', plugin_dir_url( __FILE__ ) . 'dist/css/fonts.css', array(),  plugin_version());
 }
 add_action('wp_enqueue_scripts', 'vm_custom_enable_frontend_assets');
 
