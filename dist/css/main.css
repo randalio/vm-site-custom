@@ -414,6 +414,7 @@ footer .widget_block.widget_media_image {
 .vm-form_wrapper .gform_submit_button {
   margin-top: 5rem;
   margin-bottom: -3.25rem;
+  padding-bottom: 3.25rem;
   font-family: "JetBrains Mono", monospace;
   padding: 0.25rem 0 !important;
   min-height: unset !important;
