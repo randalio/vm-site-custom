@@ -547,8 +547,8 @@ p{
         & .gform_submit_button{
     
             margin-top: 5rem;
-            margin-bottom: -3.25rem;
-            padding-bottom: 3.25rem;
+            // margin-bottom: -3.25rem;
+            // padding-bottom: 3.25rem;
             
             font-family: $jetBrains;
             padding: 0.25rem 0 !important;
@@ -655,8 +655,7 @@ p{
             & .gform_submit_button{
     
                 margin-top: 5rem;
-                margin-bottom: -3.25rem;
-                
+                position: relative;
                 font-family: $jetBrains;
                 padding: 0.25rem 0 !important;
                 min-height: unset !important;
@@ -671,7 +670,7 @@ p{
         
                 //margin-top: 4.6rem;
         
-        
+                
                 &:before{
                     content: "\e901";
                     font-size: 1rem;
@@ -682,6 +681,19 @@ p{
                     transform:translateY(-50%);
                     left: 1rem;
                     transition: all 0.25s ease-out;
+                }
+
+                &:after{
+                    content: '';
+                    position: absolute;
+                    display: block;
+                    width: 20px;
+                    height: calc( 100% + 1rem );
+                    top: -6px;
+                    left: 0;
+                    transform: translateX( calc( -100% - 0.5rem ) );
+                    z-index: 99;
+                    background: #ECE8E2;
                 }
         
                 & .gform_button{
