@@ -11,7 +11,7 @@
  * Text Domain: vm-custom
  */
 
- $version = '0.0.5';
+
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -22,19 +22,19 @@ if (!defined('WPINC')) {
  * Enable block scripts for adding block styles.
  */
 function vm_custom_enable_wp_block_scripts() {
-
+	$version = '0.0.5';
 	if ( get_option( 'vm-custom-wp-block-scripts', 1 ) == 1 ) {
 		
 		wp_enqueue_script(
 			'gutenberg-starter-editor', 
 			plugin_dir_url( __FILE__ ) . '/dist/js/editor.js', 
 			array( 'wp-blocks', 'wp-dom' ), 
-			filemtime( plugin_dir_url( __FILE__ ) . 'dist/js/editor.js' ),
+			$version,
 			true
 		);
 		
-		wp_enqueue_style('icon-styles', plugin_dir_url( __FILE__ ) . 'dist/css/fonts.css');
-		wp_enqueue_style('main-styles', plugin_dir_url( __FILE__ ) . 'dist/css/main.css');
+		wp_enqueue_style('icon-styles', plugin_dir_url( __FILE__ ) . 'dist/css/fonts.css', array(), $version);
+		wp_enqueue_style('main-styles', plugin_dir_url( __FILE__ ) . 'dist/css/main.css', array(), $version);
 		
 	}
 }
@@ -104,3 +104,14 @@ function add_button_wrapper_with_class( $button, $form ) {
     return '<span class="gform_submit_button">'.$button . "</span>";
 }
 add_filter( 'gform_submit_button', 'add_button_wrapper_with_class', 10, 2 );
+
+
+/**
+ * Add data-scroll-section attribute to Kadence footer
+ */
+function add_scroll_section_to_kadence_footer($footer_html) {
+    // Replace the opening footer tag with one containing our data attribute
+    $footer_html = str_replace('<footer', '<footer data-scroll-section', $footer_html);
+    return $footer_html;
+}
+add_filter('kadence_footer_markup', 'add_scroll_section_to_kadence_footer');

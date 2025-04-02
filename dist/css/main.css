@@ -339,7 +339,7 @@ footer .widget_block.widget_media_image {
 .vm-form_wrapper .gfield {
   position: relative;
 }
-.vm-form_wrapper .gfield label.gfield_label {
+.vm-form_wrapper .gfield label.gfield_label, .vm-form_wrapper .gfield .gform-field-label--type-sub {
   width: 0px;
   height: 0px;
   overflow: hidden;
@@ -450,6 +450,76 @@ footer .widget_block.widget_media_image {
   padding-right: 2.75rem !important;
 }
 .vm-form_wrapper .gform_submit_button:hover:before {
+  left: calc(100% - 2rem);
+  color: #DC8044;
+}
+.vm-form--alt_wrapper .gfield {
+  position: relative;
+}
+.vm-form--alt_wrapper .gfield .ginput_container.gform-grid-row {
+  gap: 2rem;
+}
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]) {
+  border: 2px solid #006778;
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: unset;
+  padding-left: 0.5rem;
+}
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox])::placeholder {
+  color: #006778;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.125rem;
+  font-style: normal;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]):focus {
+  outline: none;
+  border: 2px solid #DC8044;
+}
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]):focus::placeholder {
+  color: rgba(0, 0, 0, 0);
+}
+.vm-form--alt_wrapper .gform_submit_button {
+  margin-top: 5rem;
+  margin-bottom: -3.25rem;
+  font-family: "JetBrains Mono", monospace;
+  padding: 0.25rem 0 !important;
+  min-height: unset !important;
+  position: relative !important;
+  margin-right: 5rem !important;
+  border: 2px solid #DC8044 !important;
+  display: inline-block !important;
+  padding-left: 3.75rem !important;
+  padding-right: 1rem !important;
+  transition: all 0.25s ease-out !important;
+}
+.vm-form--alt_wrapper .gform_submit_button:before {
+  content: "\e901";
+  font-size: 1rem;
+  color: #DC8044;
+  font-family: "icomoon" !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+  transition: all 0.25s ease-out;
+}
+.vm-form--alt_wrapper .gform_submit_button .gform_button {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  font-size: 1.125rem !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  color: #DC8044 !important;
+  text-transform: uppercase !important;
+}
+.vm-form--alt_wrapper .gform_submit_button:hover {
+  padding-left: 1rem !important;
+  padding-right: 3.75rem !important;
+}
+.vm-form--alt_wrapper .gform_submit_button:hover:before {
   left: calc(100% - 2rem);
   color: #DC8044;
 }

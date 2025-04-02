@@ -40,12 +40,13 @@ var VinylPluginJS = /*#__PURE__*/function () {
       document.addEventListener('DOMContentLoaded', function () {
         // Initialize Locomotive Scroll
 
-        var follow = new Follow({
-          //debug: true,
-          //factor: 50,
-          //attribute: 'follow',
-          //initiate: false
-        });
+        // const sections = document.querySelectorAll('.entry-content .wp-block-kadence-rowlayout');
+
+        // sections.forEach((section, index) => {
+        //     section.setAttribute('data-scroll-section', '');
+        // });
+
+        //document.getElementById('colophon').setAttribute('data-scroll-section', '');
 
         // const scroll = new LocomotiveScroll({
         //   el: document.querySelector('[data-scroll-container]'),
@@ -54,6 +55,13 @@ var VinylPluginJS = /*#__PURE__*/function () {
         //   multiplier: 0.8, // Multiplier for scroll speed
         //   scrollFromAnywhere: true
         // });
+
+        var follow = new Follow({
+          //debug: true,
+          //factor: 50,
+          //attribute: 'follow',
+          //initiate: false
+        });
       });
     }
   }]);

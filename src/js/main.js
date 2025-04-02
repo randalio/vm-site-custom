@@ -10,12 +10,14 @@ class VinylPluginJS {
         document.addEventListener('DOMContentLoaded', () => {
             // Initialize Locomotive Scroll
 
-            const follow = new Follow({
-                //debug: true,
-                //factor: 50,
-                //attribute: 'follow',
-                //initiate: false
-            }) 
+
+            // const sections = document.querySelectorAll('.entry-content .wp-block-kadence-rowlayout');
+
+            // sections.forEach((section, index) => {
+            //     section.setAttribute('data-scroll-section', '');
+            // });
+
+            //document.getElementById('colophon').setAttribute('data-scroll-section', '');
 
             // const scroll = new LocomotiveScroll({
             //   el: document.querySelector('[data-scroll-container]'),
@@ -24,6 +26,13 @@ class VinylPluginJS {
             //   multiplier: 0.8, // Multiplier for scroll speed
             //   scrollFromAnywhere: true
             // });
+
+            const follow = new Follow({
+                //debug: true,
+                //factor: 50,
+                //attribute: 'follow',
+                //initiate: false
+            }) 
           
         });
     }
