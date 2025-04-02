@@ -3,7 +3,7 @@
  * Plugin Name: Vinyl Marketing Site Customizations
  * Plugin URI: 
  * Description: 
- * Version: 0.0.3
+ * Version: 0.0.5
  * Author: Randal Pope
  * Author URI: https://randal.io
  * License: GPL-2.0+
@@ -11,7 +11,7 @@
  * Text Domain: vm-custom
  */
 
- $version = '0.0.3';
+ $version = '0.0.5';
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
