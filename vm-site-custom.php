@@ -3,7 +3,7 @@
  * Plugin Name: Vinyl Marketing Site Customizations
  * Plugin URI: 
  * Description: 
- * Version: 0.0.2
+ * Version: 0.0.3
  * Author: Randal Pope
  * Author URI: https://randal.io
  * License: GPL-2.0+
@@ -11,7 +11,7 @@
  * Text Domain: vm-custom
  */
 
- $version = '0.0.2';
+ $version = '0.0.3';
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
@@ -93,3 +93,14 @@ function vm_custom_enable_frontend_assets() {
 	wp_enqueue_style('icon-styles', plugin_dir_url( __FILE__ ) . 'dist/css/fonts.css');
 }
 add_action('wp_enqueue_scripts', 'vm_custom_enable_frontend_assets');
+
+
+
+function add_button_wrapper_with_class( $button, $form ) {
+    // Return without changes for the admin back-end.
+    if ( is_admin() ){
+        return $button;
+    }
+    return '<span class="gform_submit_button">'.$button . "</span>";
+}
+add_filter( 'gform_submit_button', 'add_button_wrapper_with_class', 10, 2 );
