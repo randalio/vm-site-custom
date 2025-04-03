@@ -27,6 +27,8 @@ class VinylPluginJS {
             //   scrollFromAnywhere: true
             // });
 
+            
+
             const follow = new Follow({
                 //debug: true,
                 factor: 1,
