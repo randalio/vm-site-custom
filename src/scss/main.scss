@@ -3,20 +3,25 @@
 //     cursor: none;
 // }
 
+body{
+    overflow-x: hidden;
+}
+
 .vm-cursor{
     position: absolute;
     z-index: 9999;
     pointer-events: none;
+    transition: 150ms linear 0s;
     > div{
-        width: 2.5rem;
-        height: 2.5rem;
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
         backdrop-filter: blur(5px);
         pointer-events: none;
         position: absolute;
         transform: translate(-45%, -110%);
         background: rgba(51, 51, 51, 0.10);
-        transition: 50ms all linear 0s;
+        
     }
 }
 
@@ -731,3 +736,50 @@ p{
     }
 
  }
+
+
+ /* Blog
+ */
+ .wp-block-post-excerpt{
+    .wp-block-post-excerpt__more-text{
+        
+        position: relative;
+        border-top: 2px solid #DC8044;
+        display: inline-block;
+
+        &:before{
+            content: "\e901";
+            font-size: 1rem;
+            color: #DC8044;
+            font-family: 'icomoon' !important;
+            position: absolute;
+            top: 50%;
+            transform:translateY(-50%);
+            left: 0;
+            transition: all 0.25s ease-out;
+        }
+
+        .wp-block-post-excerpt__more-link{
+            font-family: $jetBrains;
+            text-transform: uppercase;
+            color: #0d5a67;
+            font-size: 1.125rem;
+            display: inline-block;
+            padding-left: 2.75rem;
+            padding-right: 0;
+            transition: all 0.25s ease-out;
+        }
+
+        &:hover{
+
+            & > .wp-block-post-excerpt__more-link{
+                padding-left: 0;
+                padding-right: 2.75rem;
+            }
+            
+            &:before{
+                left: calc( 100% - 1.55rem) ;
+            }
+        }
+    }
+}

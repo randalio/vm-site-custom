@@ -17,7 +17,7 @@ class VinylPluginJS {
             //     section.setAttribute('data-scroll-section', '');
             // });
 
-            //document.getElementById('colophon').setAttribute('data-scroll-section', '');
+            // document.getElementById('colophon').setAttribute('data-scroll-section', '');
 
             // const scroll = new LocomotiveScroll({
             //   el: document.querySelector('[data-scroll-container]'),
@@ -29,10 +29,15 @@ class VinylPluginJS {
 
             const follow = new Follow({
                 //debug: true,
-                //factor: 50,
+                factor: 1,
                 //attribute: 'follow',
-                //initiate: false
-            }) 
+                initiate: false
+            });
+
+            setTimeout(() => {
+                follow.initiate();
+            }, 200);
+            
           
         });
     }

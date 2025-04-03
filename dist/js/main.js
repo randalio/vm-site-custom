@@ -46,7 +46,7 @@ var VinylPluginJS = /*#__PURE__*/function () {
         //     section.setAttribute('data-scroll-section', '');
         // });
 
-        //document.getElementById('colophon').setAttribute('data-scroll-section', '');
+        // document.getElementById('colophon').setAttribute('data-scroll-section', '');
 
         // const scroll = new LocomotiveScroll({
         //   el: document.querySelector('[data-scroll-container]'),
@@ -58,10 +58,13 @@ var VinylPluginJS = /*#__PURE__*/function () {
 
         var follow = new Follow({
           //debug: true,
-          //factor: 50,
+          factor: 1,
           //attribute: 'follow',
-          //initiate: false
+          initiate: false
         });
+        setTimeout(function () {
+          follow.initiate();
+        }, 200);
       });
     }
   }]);
