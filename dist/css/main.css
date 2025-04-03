@@ -435,6 +435,18 @@ footer .widget_block.widget_media_image {
   left: 0;
   transition: all 0.25s ease-out;
 }
+.vm-form_wrapper .gform_submit_button:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 2rem;
+  height: calc(100% + 1rem);
+  top: -6px;
+  left: 0;
+  transform: translateX(calc(-100% - 0.5rem));
+  z-index: 99;
+  background: #ECE8E2;
+}
 .vm-form_wrapper .gform_submit_button .gform_button {
   background-color: transparent !important;
   border-radius: 0 !important;
@@ -504,18 +516,6 @@ footer .widget_block.widget_media_image {
   transform: translateY(-50%);
   left: 1rem;
   transition: all 0.25s ease-out;
-}
-.vm-form--alt_wrapper .gform_submit_button:after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: calc(100% + 1rem);
-  top: -6px;
-  left: 0;
-  transform: translateX(calc(-100% - 0.5rem));
-  z-index: 99;
-  background: #ECE8E2;
 }
 .vm-form--alt_wrapper .gform_submit_button .gform_button {
   background-color: transparent !important;
