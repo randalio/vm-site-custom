@@ -15,7 +15,7 @@ body{
         transform: translate(-75%, -65%);
     }
     100%{
-        transform: translate(-15%, -45%);
+        transform: transflate(-15%, -45%);
     }
 }
 
@@ -24,8 +24,11 @@ body{
     z-index: 9999;
     pointer-events: none;
     transition: 175ms linear 0s;
-    
 
+    @media screen and (max-width: 768px){
+        display: none !important;
+    }
+    
     > div{
         width: 3rem;
         height: 3rem;
@@ -38,6 +41,8 @@ body{
         animation: vm-cursor 5.5s ease-in-out infinite;
         
     }
+
+
 }
 
 /* Customize Header */
@@ -568,7 +573,7 @@ p{
 
             
     
-            margin-top: 5rem;
+            margin-top: 2.5rem;
             // margin-bottom: -3.25rem;
             // padding-bottom: 3.25rem;
             
@@ -689,7 +694,7 @@ p{
 
             & .gform_submit_button{
     
-                margin-top: 5rem;
+                margin-top: 2.5rem;
                 position: relative;
                 font-family: $jetBrains;
                 padding: 0.25rem 0 !important;
@@ -920,4 +925,11 @@ body .wp-block-kadence-query-pagination{
         z-index: 1; 
     }
 
+}
+
+
+body.high-dpi{
+    .vm-bubble{
+        filter: blur( 720px ) !important;
+    }
 }
