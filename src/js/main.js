@@ -82,6 +82,9 @@ class VinylPluginJS {
 
             if( no_follow.length == 0 ) {
 
+                
+                
+
                 const follow = new Follow({
                     //debug: true,
                     factor: 1,
@@ -92,6 +95,24 @@ class VinylPluginJS {
                 setTimeout(() => {
                     follow.initiate();
                 }, 200);
+
+                // Track Changes in Document Height to keep element attached to cursor
+                let previousHeight = document.documentElement.scrollHeight;
+                const heightCheckInterval = setInterval(() => {
+                    const currentHeight = document.documentElement.scrollHeight;
+                    if (currentHeight !== previousHeight) {
+                        // Document height has changed
+                        console.log('Document height changed from', previousHeight, 'to', currentHeight);
+                        previousHeight = currentHeight;
+                        follow.destroy();
+
+                        setTimeout(() => {
+                            follow.initiate();
+                        }, 200);
+                    }
+                }, 500); // Check every 500 milliseconds
+
+
 
             }
 

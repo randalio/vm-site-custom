@@ -3,7 +3,7 @@
  * Plugin Name: Vinyl Marketing Site Customizations
  * Plugin URI: 
  * Description: 
- * Version: 0.0.12
+ * Version: 0.0.13
  * Author: Randal Pope
  * Author URI: https://randal.io
  * License: GPL-2.0+
@@ -13,7 +13,7 @@
 
 
 function plugin_version(){
-	$version = '0.0.12';
+	$version = '0.0.13';
 	return $version;
 }
 
@@ -38,8 +38,8 @@ function vm_custom_enable_wp_block_scripts() {
 			true
 		);
 		
-		wp_enqueue_style('icon-styles', plugin_dir_url( __FILE__ ) . 'dist/css/fonts.css', array(), $version);
-		wp_enqueue_style('main-styles', plugin_dir_url( __FILE__ ) . 'dist/css/main.css', array(), $version);
+		wp_enqueue_style('icon-styles', plugin_dir_url( __FILE__ ) . 'dist/css/fonts.css', array(), plugin_version());
+		wp_enqueue_style('main-styles', plugin_dir_url( __FILE__ ) . 'dist/css/main.css', array(), plugin_version());
 		
 	}
 }
@@ -120,3 +120,51 @@ function add_scroll_section_to_kadence_footer($footer_html) {
     return $footer_html;
 }
 add_filter('kadence_footer_markup', 'add_scroll_section_to_kadence_footer');
+
+
+
+/**
+ * Set default pattern for new posts (WordPress 6.4+)
+ */
+function set_default_post_pattern($pattern, $post_type) {
+    // Only apply to 'post' post type
+    if ($post_type === 'post') {
+        // Replace with your pattern name
+        return 'your-plugin-text-domain/two-column-text';
+    }
+    
+    return $pattern;
+}
+
+/**
+ * Set default content for new posts (for WordPress earlier than 6.4)
+ */
+function set_default_post_content($content, $post) {
+	error_log('set_default_post_content');
+	error_log( print_r($post, true) );
+	error_log( print_r($content, true) );
+
+    // Only apply to new posts of type 'post'
+    if ($post->post_type === 'post' && $post->post_content === '') {
+
+		// get post title
+		$post_title = $post->post_title;
+
+		// get post excerpt
+		$post_excerpt = $post->post_excerpt;
+
+        // Return your pattern content directly
+        $content = file_get_contents( plugin_dir_path(__FILE__) . '/patterns.php');
+
+		return $content;
+    }
+    
+    return $content;
+}
+
+// // Add the appropriate filter based on WordPress version
+// if (version_compare($GLOBALS['wp_version'], '6.4', '>=')) {
+//     add_filter('default_block_pattern', 'set_default_post_pattern', 10, 2);
+// } else {
+    add_filter('default_content', 'set_default_post_content', 10, 2);
+//}

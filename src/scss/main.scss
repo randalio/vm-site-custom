@@ -5,63 +5,6 @@
 
 body{
     overflow-x: hidden;
-
-
-    // & *{
-    //     cursor: none !important;
-    // }
-
-    #wrapper{
-        cursor: none !important;
-
-        & a{
-            cursor: none !important;
-        }
-    }
-    
-    
-    // .wp-block-button{
-
-    //     transform: scale(1);
-    //     transition: transform 0.5s ease-in-out;
-    //     z-index: 1;
-
-    //     &:after{
-    //         content: '';
-    //         position: absolute;
-    //         display: block;
-    //         width: calc(100% + 5.5rem);
-    //         height: calc(100% + 2.5rem);
-    //         top: -1.5rem;
-    //         left: -2.25rem;
-    //         background: rgba(51, 51, 51, 0.10);
-    //         padding: 1.25rem;
-    //         border-radius: 3rem;
-    //         opacity: 0;
-    //         transition: opacity 0.25s linear;
-    //         backdrop-filter: blur(5px);
-    //         z-index: -1;
-    //     }
-
-    //     & a{
-    //         position: relative;
-    //         z-index: 1;
-    //     }
-
-    //     &:hover{
-    //         transform: scale(1.1);
-
-    //         & a{
-    //             cursor: none;
-        
-    //         }
-    
-    //         &:after{
-    //             opacity: 1;
-    //         }
-    //     }
-    // }
-
 }
 
 @keyframes vm-cursor{
@@ -1011,4 +954,42 @@ body.high-dpi{
     .vm-bubble{
         filter: blur( 720px ) !important;
     }
+}
+
+
+
+
+body.post-template-default.single-post{
+
+    .wp-block-post-title{
+        font-size: 2rem !important;
+        letter-spacing: -0.12rem;
+
+        @media screen and (min-width: 768px){
+            font-size: 3.25rem !important;
+            letter-spacing: -0.19rem !important;
+        }
+
+        @media screen and (min-width: 1024px){
+            font-size: 4.5rem !important;
+            letter-spacing: -0.22rem !important;
+        }
+    }
+
+    h2.wp-block-heading{
+        font-size: 2.625rem;
+        letter-spacing: -0.13125rem;
+        line-height: 1.5;
+    }
+
+    h3.wp-block-heading{
+        color:#DC8044;
+        font-family: $jetBrains;
+        font-size: 1.3125rem;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+
+
 }
