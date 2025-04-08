@@ -976,13 +976,13 @@ body.post-template-default.single-post{
         }
     }
 
-    h2.wp-block-heading{
+    h2.wp-block-heading:not(.is-style-eyebrow-rainbow){
         font-size: 2.625rem;
         letter-spacing: -0.13125rem;
         line-height: 1.5;
     }
 
-    h3.wp-block-heading{
+    h3.wp-block-heading:not(.is-style-eyebrow-rainbow){
         color:#DC8044;
         font-family: $jetBrains;
         font-size: 1.3125rem;
