@@ -1,2 +1,145 @@
-(()=>{function e(t){return e="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e(t)}function t(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,o(r.key),r)}}function o(t){var o=function(t){if("object"!=e(t)||!t)return t;var o=t[Symbol.toPrimitive];if(void 0!==o){var n=o.call(t,"string");if("object"!=e(n))return n;throw new TypeError("@@toPrimitive must return a primitive value.")}return String(t)}(t);return"symbol"==e(o)?o:o+""}new(function(){return e=function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.init()},(o=[{key:"init",value:function(){document.addEventListener("DOMContentLoaded",(function(){if(document.querySelectorAll("#videomodal").length>0){var e=document.getElementById("videomodal").innerHTML;t=function(){var t=document.getElementById("videomodal");t.querySelector("video"),t.classList.contains("is-open")?t.innerHTML=e:t.innerHTML=""},o=document.getElementById("videomodal"),n=o.className,window.setInterval((function(){var e=o.className;e!==n&&(t(),n=e)}),10)}var t,o,n;document.querySelectorAll(".locomotive").length>0&&(document.querySelectorAll(".entry-content > .wp-block-kadence-rowlayout").forEach((function(e,t){e.setAttribute("data-scroll-section","")})),document.getElementById("colophon").setAttribute("data-scroll-section",""),new LocomotiveScroll({el:document.querySelector("[data-scroll-container]"),smooth:!0,lerp:.1,multiplier:.8,scrollFromAnywhere:!0}));var r=document.querySelectorAll(".no-follow");if(console.log(r),0==r.length){var i=new Follow({factor:1,initiate:!1});setTimeout((function(){i.initiate()}),200);var l=document.documentElement.scrollHeight;setInterval((function(){var e=document.documentElement.scrollHeight;e!==l&&(console.log("Document height changed from",l,"to",e),l=e,i.destroy(),setTimeout((function(){i.initiate()}),200))}),500)}}))}}])&&t(e.prototype,o),Object.defineProperty(e,"prototype",{writable:!1}),e;var e,o}())})();
+/******/ (() => { // webpackBootstrap
+/******/ 	// The require scope
+/******/ 	var __webpack_require__ = {};
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other entry modules.
+(() => {
+/*!************************!*\
+  !*** ./src/js/main.js ***!
+  \************************/
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _classCallCheck(a, n) { if (!(a instanceof n)) throw new TypeError("Cannot call a class as a function"); }
+function _defineProperties(e, r) { for (var t = 0; t < r.length; t++) { var o = r[t]; o.enumerable = o.enumerable || !1, o.configurable = !0, "value" in o && (o.writable = !0), Object.defineProperty(e, _toPropertyKey(o.key), o); } }
+function _createClass(e, r, t) { return r && _defineProperties(e.prototype, r), t && _defineProperties(e, t), Object.defineProperty(e, "prototype", { writable: !1 }), e; }
+function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : i + ""; }
+function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+// Add your JavaScript code here
+var VinylPluginJS = /*#__PURE__*/function () {
+  function VinylPluginJS() {
+    _classCallCheck(this, VinylPluginJS);
+    this.init();
+  }
+  return _createClass(VinylPluginJS, [{
+    key: "init",
+    value: function init() {
+      // wait until DOM is ready
+      document.addEventListener('DOMContentLoaded', function () {
+        // Initialize Locomotive Scroll
+
+        //const modalElement = document.getElementById('#videomodal'); // Replace with your modal's actual ID
+
+        function addClassNameListener(elemId, callback) {
+          var elem = document.getElementById(elemId);
+          var lastClassName = elem.className;
+          window.setInterval(function () {
+            var className = elem.className;
+            if (className !== lastClassName) {
+              callback();
+              lastClassName = className;
+            }
+          }, 10);
+        }
+        if (document.querySelectorAll('#videomodal').length > 0) {
+          // get #videomodal's inner HTML
+          var modalContent = document.getElementById('videomodal').innerHTML;
+          addClassNameListener('videomodal', function () {
+            var modalElement = document.getElementById('videomodal');
+            var modalVideo = modalElement.querySelector('video');
+            if (modalElement.classList.contains('is-open')) {
+              modalElement.innerHTML = modalContent;
+              //console.log('video modal is open');
+            } else {
+              modalElement.innerHTML = '';
+              //console.log('video modal is not open');
+            }
+          });
+        }
+
+        // const pixelDensity = window.devicePixelRatio;
+        // console.log("Pixel density:", pixelDensity);
+        // if( pixelDensity > 1 ) {
+        //     document.querySelector('body').classList.add('high-dpi');
+        // }
+
+        var loco = document.querySelectorAll('.locomotive');
+        if (loco.length > 0) {
+          var sections = document.querySelectorAll('.entry-content > .wp-block-kadence-rowlayout');
+          sections.forEach(function (section, index) {
+            section.setAttribute('data-scroll-section', '');
+          });
+          document.getElementById('colophon').setAttribute('data-scroll-section', '');
+          //document.querySelector('header').setAttribute('data-scroll-section', '');
+
+          var scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true,
+            lerp: 0.1,
+            // Start with a moderately responsive lerp
+            multiplier: 0.8,
+            // Multiplier for scroll speed
+            scrollFromAnywhere: true
+          });
+        }
+        var no_follow = document.querySelectorAll('.no-follow');
+        console.log(no_follow);
+        if (no_follow.length == 0) {
+          var follow = new Follow({
+            //debug: true,
+            factor: 1,
+            //attribute: 'follow',
+            initiate: false
+          });
+          setTimeout(function () {
+            follow.initiate();
+          }, 200);
+
+          // Track Changes in Document Height to keep element attached to cursor
+          var previousHeight = document.documentElement.scrollHeight;
+          var heightCheckInterval = setInterval(function () {
+            var currentHeight = document.documentElement.scrollHeight;
+            if (currentHeight !== previousHeight) {
+              // Document height has changed
+              console.log('Document height changed from', previousHeight, 'to', currentHeight);
+              previousHeight = currentHeight;
+              follow.destroy();
+              setTimeout(function () {
+                follow.initiate();
+              }, 200);
+            }
+          }, 500); // Check every 500 milliseconds
+        }
+      });
+    }
+  }]);
+}();
+new VinylPluginJS();
+})();
+
+// This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
+(() => {
+"use strict";
+/*!****************************!*\
+  !*** ./src/scss/main.scss ***!
+  \****************************/
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+})();
+
+/******/ })()
+;
 //# sourceMappingURL=main.js.map
