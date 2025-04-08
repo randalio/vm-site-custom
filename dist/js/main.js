@@ -122,6 +122,26 @@ var VinylPluginJS = /*#__PURE__*/function () {
             }
           }, 500); // Check every 500 milliseconds
         }
+
+        // Work Navigation Feature
+
+        var workNav = document.getElementById('work_navigation_feature');
+        if (workNav) {
+          var workNavItems = workNav.querySelectorAll('.kb-advanced-heading-link');
+          workNavItems.forEach(function (item) {
+            item.addEventListener('mouseenter', function () {
+              var bg_target = '#' + this.getAttribute('data-bg-target');
+              console.log(bg_target);
+              var bg_target = document.querySelector(bg_target);
+              console.log(bg_target);
+              var bg_targets = document.querySelectorAll('.work-nav-bg');
+              bg_targets.forEach(function (el) {
+                el.classList.remove('active');
+              });
+              bg_target.classList.add('active');
+            });
+          });
+        }
       });
     }
   }]);

@@ -717,4 +717,14 @@ body.post-template-default.single-post h3.wp-block-heading:not(.is-style-eyebrow
   font-weight: 400;
 }
 
+.work-nav-bg {
+  z-index: 0 !important;
+  opacity: 0;
+  transition: opacity 0.66s ease-in-out;
+}
+.work-nav-bg.active {
+  z-index: 99 !important;
+  opacity: 1;
+}
+
 /*# sourceMappingURL=main.css.map*/

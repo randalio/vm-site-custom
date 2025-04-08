@@ -991,3 +991,13 @@ body.post-template-default.single-post{
     }
 
 }
+
+.work-nav-bg{
+    z-index: 0 !important;
+    opacity: 0;
+    transition: opacity 0.66s ease-in-out;
+    &.active{
+        z-index: 99 !important;
+        opacity: 1;
+    }
+}

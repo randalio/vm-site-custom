@@ -116,6 +116,35 @@ class VinylPluginJS {
 
             }
 
+
+
+            // Work Navigation Feature
+
+            const workNav = document.getElementById('work_navigation_feature');
+
+            if (workNav) {
+                const workNavItems = workNav.querySelectorAll('.kb-advanced-heading-link');
+
+                workNavItems.forEach((item) => {
+
+                    item.addEventListener('mouseenter', function() {
+
+                        var bg_target = '#'+this.getAttribute('data-bg-target');
+                        console.log(bg_target);
+                        var bg_target = document.querySelector(bg_target);
+                        console.log(bg_target);
+                        var bg_targets = document.querySelectorAll('.work-nav-bg');
+
+
+
+                        bg_targets.forEach((el) => {
+                            el.classList.remove('active');
+                        });
+                        bg_target.classList.add('active');
+                    });
+                });
+            }
+
             
             
           
