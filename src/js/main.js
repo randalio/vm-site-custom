@@ -65,7 +65,7 @@ class VinylPluginJS {
                 });
 
                 document.getElementById('colophon').setAttribute('data-scroll-section', '');
-                document.querySelector('header').setAttribute('data-scroll-section', '');
+                //document.querySelector('header').setAttribute('data-scroll-section', '');
 
                 const scroll = new LocomotiveScroll({
                   el: document.querySelector('[data-scroll-container]'),
