@@ -727,4 +727,16 @@ body.post-template-default.single-post h3.wp-block-heading:not(.is-style-eyebrow
   opacity: 1;
 }
 
+header svg {
+  mix-blend-mode: difference;
+}
+
+header svg path {
+  fill: white;
+}
+
+.single-content .is-style-justify-center-xy figure.wp-block-image:last-child {
+  margin-bottom: inherit !important;
+}
+
 /*# sourceMappingURL=main.css.map*/

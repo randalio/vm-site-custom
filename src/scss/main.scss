@@ -1001,3 +1001,25 @@ body.post-template-default.single-post{
         opacity: 1;
     }
 }
+
+// header img.custom-logo{
+    
+//         // filter: invert(100%);
+//         // mix-blend-mode: difference;
+//         mix-blend-mode: difference;
+
+
+// }
+
+header svg {
+    mix-blend-mode: difference;
+}
+  
+header  svg path {
+    fill: white;
+}
+
+
+.single-content .is-style-justify-center-xy figure.wp-block-image:last-child{
+    margin-bottom: inherit !important;
+}

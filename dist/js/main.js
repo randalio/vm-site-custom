@@ -38,7 +38,29 @@ var VinylPluginJS = /*#__PURE__*/function () {
     value: function init() {
       // wait until DOM is ready
       document.addEventListener('DOMContentLoaded', function () {
-        // Initialize Locomotive Scroll
+        function updateSvgColor() {
+          var header = document.querySelector('.wp-block-kadence-header');
+          var svg = header.querySelector('svg');
+          var bgColor = getComputedStyle(document.elementFromPoint(svg.getBoundingClientRect().left + 10, svg.getBoundingClientRect().top + 10)).backgroundColor;
+          console.log(bgColor);
+
+          // Convert background color to grayscale value
+          var rgb = bgColor.match(/\d+/g);
+          var brightness = (parseInt(rgb[0]) * 0.299 + parseInt(rgb[1]) * 0.587 + parseInt(rgb[2]) * 0.114) / 255;
+
+          // Set SVG color based on background brightness
+          if (brightness > 0.5) {
+            // Dark SVG for light backgrounds
+            svg.querySelectorAll('path').forEach(function (path) {
+              return path.style.fill = '#000000';
+            });
+          } else {
+            // Light SVG for dark backgrounds
+            svg.querySelectorAll('path').forEach(function (path) {
+              return path.style.fill = '#FFFFFF';
+            });
+          }
+        }
 
         //const modalElement = document.getElementById('#videomodal'); // Replace with your modal's actual ID
 
@@ -93,6 +115,9 @@ var VinylPluginJS = /*#__PURE__*/function () {
             // Multiplier for scroll speed
             scrollFromAnywhere: true
           });
+          scroll.on('scroll', function (obj) {
+            updateSvgColor();
+          });
         }
         var no_follow = document.querySelectorAll('.no-follow');
         console.log(no_follow);
@@ -142,6 +167,10 @@ var VinylPluginJS = /*#__PURE__*/function () {
             });
           });
         }
+
+        // // Run on scroll and page load
+        // window.addEventListener('scroll', updateSvgColor);
+        // window.addEventListener('load', updateSvgColor);
       });
     }
   }]);

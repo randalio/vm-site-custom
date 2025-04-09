@@ -8,8 +8,32 @@ class VinylPluginJS {
     init() {
         // wait until DOM is ready
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize Locomotive Scroll
+            
+            
 
+            function updateSvgColor() {
+                const header = document.querySelector('.wp-block-kadence-header');
+                const svg = header.querySelector('svg');
+                const bgColor = getComputedStyle(document.elementFromPoint(
+                    svg.getBoundingClientRect().left + 10,
+                    svg.getBoundingClientRect().top + 10
+                )).backgroundColor;
+
+                console.log(bgColor);
+                
+                // Convert background color to grayscale value
+                const rgb = bgColor.match(/\d+/g);
+                const brightness = (parseInt(rgb[0]) * 0.299 + parseInt(rgb[1]) * 0.587 + parseInt(rgb[2]) * 0.114) / 255;
+                
+                // Set SVG color based on background brightness
+                if (brightness > 0.5) {
+                  // Dark SVG for light backgrounds
+                  svg.querySelectorAll('path').forEach(path => path.style.fill = '#000000');
+                } else {
+                  // Light SVG for dark backgrounds
+                  svg.querySelectorAll('path').forEach(path => path.style.fill = '#FFFFFF');
+                }
+            }
 
             //const modalElement = document.getElementById('#videomodal'); // Replace with your modal's actual ID
 
@@ -73,6 +97,10 @@ class VinylPluginJS {
                   lerp: 0.1, // Start with a moderately responsive lerp
                   multiplier: 0.8, // Multiplier for scroll speed
                   scrollFromAnywhere: true
+                });
+
+                scroll.on('scroll', (obj) => {
+                    updateSvgColor();
                 });
 
             }
@@ -144,6 +172,22 @@ class VinylPluginJS {
                     });
                 });
             }
+
+
+
+
+
+
+            
+            // // Run on scroll and page load
+            // window.addEventListener('scroll', updateSvgColor);
+            // window.addEventListener('load', updateSvgColor);
+
+
+
+
+
+
 
             
             
