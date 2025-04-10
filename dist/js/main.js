@@ -117,7 +117,8 @@ var VinylPluginJS = /*#__PURE__*/function () {
           });
           var caseStudyOverlay = document.getElementById('caseStudyOverlay');
           var caseStudyHero = document.getElementById('caseStudyHero');
-          console.log(caseStudyOverlay.length);
+          //console.log(caseStudyOverlay.length);
+
           if (caseStudyOverlay) {
             scroll.on('scroll', function (obj) {
               //
