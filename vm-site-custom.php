@@ -3,7 +3,7 @@
  * Plugin Name: Vinyl Marketing Site Customizations
  * Plugin URI: 
  * Description: 
- * Version: 0.0.12
+ * Version: 0.0.20
  * Author: Randal Pope
  * Author URI: https://randal.io
  * License: GPL-2.0+

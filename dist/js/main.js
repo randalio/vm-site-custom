@@ -109,7 +109,7 @@ var VinylPluginJS = /*#__PURE__*/function () {
           var scroll = new LocomotiveScroll({
             el: document.querySelector('[data-scroll-container]'),
             smooth: true,
-            lerp: 0.1,
+            lerp: 0.15,
             // Start with a moderately responsive lerp
             multiplier: 0.8,
             // Multiplier for scroll speed

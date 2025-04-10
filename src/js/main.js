@@ -94,7 +94,7 @@ class VinylPluginJS {
                 const scroll = new LocomotiveScroll({
                   el: document.querySelector('[data-scroll-container]'),
                   smooth: true,
-                  lerp: 0.1, // Start with a moderately responsive lerp
+                  lerp: 0.15, // Start with a moderately responsive lerp
                   multiplier: 0.8, // Multiplier for scroll speed
                   scrollFromAnywhere: true
                 });
