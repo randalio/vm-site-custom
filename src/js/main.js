@@ -98,10 +98,32 @@ class VinylPluginJS {
                   multiplier: 0.8, // Multiplier for scroll speed
                   scrollFromAnywhere: true
                 });
+                
 
-                // scroll.on('scroll', (obj) => {
-                //     updateSvgColor();
-                // });
+                var caseStudyOverlay = document.getElementById('caseStudyOverlay');
+                var caseStudyHero = document.getElementById('caseStudyHero');
+                console.log(caseStudyOverlay.length);
+
+                if( caseStudyOverlay ) {
+                    scroll.on('scroll', (obj) => {
+                    
+                        //
+                        let scrollY = obj.scroll.y;
+
+                        if( scrollY > 32 ) {
+                            console.log(obj.scroll.y);
+                            if( !caseStudyOverlay.classList.contains('active') ) {
+                                caseStudyOverlay.classList.add('active' );
+                                caseStudyHero.classList.add('active' );
+                            }
+                        }else{
+                            if( caseStudyOverlay.classList.contains('active') ) {
+                                caseStudyOverlay.classList.remove('active' );
+                                caseStudyHero.classList.remove('active' );
+                            }
+                        }
+                    });
+                }
 
             }
 

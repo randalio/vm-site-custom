@@ -115,10 +115,27 @@ var VinylPluginJS = /*#__PURE__*/function () {
             // Multiplier for scroll speed
             scrollFromAnywhere: true
           });
-
-          // scroll.on('scroll', (obj) => {
-          //     updateSvgColor();
-          // });
+          var caseStudyOverlay = document.getElementById('caseStudyOverlay');
+          var caseStudyHero = document.getElementById('caseStudyHero');
+          console.log(caseStudyOverlay.length);
+          if (caseStudyOverlay) {
+            scroll.on('scroll', function (obj) {
+              //
+              var scrollY = obj.scroll.y;
+              if (scrollY > 32) {
+                console.log(obj.scroll.y);
+                if (!caseStudyOverlay.classList.contains('active')) {
+                  caseStudyOverlay.classList.add('active');
+                  caseStudyHero.classList.add('active');
+                }
+              } else {
+                if (caseStudyOverlay.classList.contains('active')) {
+                  caseStudyOverlay.classList.remove('active');
+                  caseStudyHero.classList.remove('active');
+                }
+              }
+            });
+          }
         }
         var no_follow = document.querySelectorAll('.no-follow');
         console.log(no_follow);
