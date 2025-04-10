@@ -1092,7 +1092,7 @@ body:not(.wp-admin){
         sepia(16%);
     
         --wipe-position: calc(-1 * var(--gradient-length));
-        --gradient-length: 20%;
+        --gradient-length: 70%;
         -webkit-mask-image: linear-gradient(
             to top,
             black var(--wipe-position),
@@ -1100,7 +1100,7 @@ body:not(.wp-admin){
             transparent
         );
     
-        transition: --wipe-position 1600ms cubic-bezier(0, 0.55, 0.45, 1);
+        transition: --wipe-position 750ms cubic-bezier(0, 0.33, 0.66, 1);
     }
     
     .case-study-overlay.active .overlay--wrap {
@@ -1127,12 +1127,14 @@ body:not(.wp-admin){
         padding: 0 !important;
         margin: 0 !important;
         & > *{
-            transition: opacity 0.25s ease;
+            opacity: 1;
+            transition: opacity 1.25s ease 0.5s;
         }
     }
     
     .case-study-hero.active{
         & > *{
+            transition: opacity 0.25s ease;
             opacity: 0;
         }
     }
