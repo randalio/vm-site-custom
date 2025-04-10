@@ -163,8 +163,6 @@ class VinylPluginJS {
                         console.log(bg_target);
                         var bg_targets = document.querySelectorAll('.work-nav-bg');
 
-
-
                         bg_targets.forEach((el) => {
                             el.classList.remove('active');
                         });

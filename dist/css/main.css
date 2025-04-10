@@ -195,7 +195,7 @@ body {
   text-transform: uppercase;
   font-size: 1.3125rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   position: relative;
   display: block;
   max-width: max-content !important;
@@ -232,7 +232,7 @@ body {
   text-transform: uppercase;
   font-size: 1.3125rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   position: relative;
   display: inline-block;
 }
@@ -283,7 +283,7 @@ footer .widget.widget_nav_menu ul.menu a {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   text-transform: uppercase;
 }
 footer .widget.widget_nav_menu ul.menu:before {
@@ -714,7 +714,7 @@ body.post-template-default.single-post h3.wp-block-heading:not(.is-style-eyebrow
   font-family: "JetBrains Mono", monospace;
   font-size: 1.3125rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 3xf00;
 }
 
 .work-nav-bg {
