@@ -1145,7 +1145,7 @@ body:not(.wp-admin){
 
 .loco-fade-in{
     opacity: 0;
-    transition: opacity 3.5s ease;
+    transition: opacity 2.5s ease;
 }
 
 .loco-fade-in.loco-active{
@@ -1157,7 +1157,7 @@ body:not(.wp-admin){
 .loco-fade-in-up{
     opacity: 0;
     transform: translateY(9rem);
-    transition: opacity 1.5s ease, transform 1.5s ease-in-out;
+    transition: opacity .5s ease, transform 0.66s ease-out;
 }
 
 .loco-fade-in-up.second{

@@ -781,7 +781,7 @@ body:not(.wp-admin) .case-study-hero.active > * {
 }
 body:not(.wp-admin) .loco-fade-in {
   opacity: 0;
-  transition: opacity 3.5s ease;
+  transition: opacity 2.5s ease;
 }
 body:not(.wp-admin) .loco-fade-in.loco-active {
   opacity: 1;
@@ -789,7 +789,7 @@ body:not(.wp-admin) .loco-fade-in.loco-active {
 body:not(.wp-admin) .loco-fade-in-up {
   opacity: 0;
   transform: translateY(9rem);
-  transition: opacity 1.5s ease, transform 1.5s ease-in-out;
+  transition: opacity 0.5s ease, transform 0.66s ease-out;
 }
 body:not(.wp-admin) .loco-fade-in-up.second {
   transition-delay: 0.33s;

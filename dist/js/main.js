@@ -138,34 +138,40 @@ var VinylPluginJS = /*#__PURE__*/function () {
             });
           }
         }
-        var no_follow = document.querySelectorAll('.no-follow');
-        console.log(no_follow);
-        if (no_follow.length == 0) {
-          var follow = new Follow({
-            //debug: true,
-            factor: 1,
-            //attribute: 'follow',
-            initiate: false
-          });
-          setTimeout(function () {
-            follow.initiate();
-          }, 200);
 
-          // Track Changes in Document Height to keep element attached to cursor
-          var previousHeight = document.documentElement.scrollHeight;
-          var heightCheckInterval = setInterval(function () {
-            var currentHeight = document.documentElement.scrollHeight;
-            if (currentHeight !== previousHeight) {
-              // Document height has changed
-              console.log('Document height changed from', previousHeight, 'to', currentHeight);
-              previousHeight = currentHeight;
-              follow.destroy();
-              setTimeout(function () {
-                follow.initiate();
-              }, 200);
-            }
-          }, 500); // Check every 500 milliseconds
-        }
+        // const no_follow = document.querySelectorAll('.no-follow');
+        // console.log(no_follow);
+
+        // if( no_follow.length == 0 ) {
+
+        //     const follow = new Follow({
+        //         //debug: true,
+        //         factor: 1,
+        //         //attribute: 'follow',
+        //         initiate: false
+        //     });
+
+        //     setTimeout(() => {
+        //         follow.initiate();
+        //     }, 200);
+
+        //     // Track Changes in Document Height to keep element attached to cursor
+        //     let previousHeight = document.documentElement.scrollHeight;
+        //     const heightCheckInterval = setInterval(() => {
+        //         const currentHeight = document.documentElement.scrollHeight;
+        //         if (currentHeight !== previousHeight) {
+        //             // Document height has changed
+        //             console.log('Document height changed from', previousHeight, 'to', currentHeight);
+        //             previousHeight = currentHeight;
+        //             follow.destroy();
+
+        //             setTimeout(() => {
+        //                 follow.initiate();
+        //             }, 200);
+        //         }
+        //     }, 500); // Check every 500 milliseconds
+
+        // }
 
         // Work Navigation Feature
 
