@@ -1160,6 +1160,14 @@ body:not(.wp-admin){
     transition: opacity 1.5s ease, transform 1.5s ease-in-out;
 }
 
+.loco-fade-in-up.second{
+    transition-delay: 0.33s;
+}
+
+.loco-fade-in-up.third{
+    transition-delay: 0.66s;
+}
+
 .loco-fade-in-up.loco-active{
     opacity: 1;
     transform: translateY(0rem);
