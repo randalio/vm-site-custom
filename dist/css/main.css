@@ -684,10 +684,9 @@ body .wp-block-kadence-query-pagination .pagination .page-numbers.prev:hover:bef
   z-index: 1;
 }
 
-body.high-dpi .vm-bubble {
-  filter: blur(720px) !important;
+body.high-dpi .vm-bubble-cluster-wrapper {
+  filter: blur(180px) !important;
 }
-
 body.post-template-default.single-post .wp-block-post-title {
   font-size: 2rem !important;
   letter-spacing: -0.12rem;

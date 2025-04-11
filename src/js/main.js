@@ -71,11 +71,11 @@ class VinylPluginJS {
 
 
 
-            // const pixelDensity = window.devicePixelRatio;
-            // console.log("Pixel density:", pixelDensity);
-            // if( pixelDensity > 1 ) {
-            //     document.querySelector('body').classList.add('high-dpi');
-            // }
+            const pixelDensity = window.devicePixelRatio;
+            console.log("Pixel density:", pixelDensity);
+            if( pixelDensity > 1 ) {
+                document.querySelector('body').classList.add('high-dpi');
+            }
 
 
             const loco = document.querySelectorAll('.locomotive');

@@ -951,9 +951,13 @@ body .wp-block-kadence-query-pagination{
 
 
 body.high-dpi{
-    .vm-bubble{
-        filter: blur( 720px ) !important;
+    .vm-bubble-cluster-wrapper{
+        filter: blur(180px) !important;
+        .vm-bubble{
+            
+        }
     }
+
 }
 
 

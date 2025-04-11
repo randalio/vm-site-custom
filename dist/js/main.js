@@ -90,13 +90,11 @@ var VinylPluginJS = /*#__PURE__*/function () {
             }
           });
         }
-
-        // const pixelDensity = window.devicePixelRatio;
-        // console.log("Pixel density:", pixelDensity);
-        // if( pixelDensity > 1 ) {
-        //     document.querySelector('body').classList.add('high-dpi');
-        // }
-
+        var pixelDensity = window.devicePixelRatio;
+        console.log("Pixel density:", pixelDensity);
+        if (pixelDensity > 1) {
+          document.querySelector('body').classList.add('high-dpi');
+        }
         var loco = document.querySelectorAll('.locomotive');
         if (loco.length > 0) {
           var sections = document.querySelectorAll('.entry-content > .wp-block-kadence-rowlayout');
