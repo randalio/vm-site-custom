@@ -77,13 +77,13 @@ function vm_custom_enable_frontend_assets() {
 		true
 	);
 
-	// wp_enqueue_script(
-	// 	'follow-js',
-	// 	plugin_dir_url(__FILE__) . 'dist/js/follow.min.js',
-	// 	array(),
-	// 	plugin_version(),
-	// 	true
-	// );
+	wp_enqueue_script(
+		'follow-js',
+		plugin_dir_url(__FILE__) . 'dist/js/follow.min.js',
+		array(),
+		plugin_version(),
+		true
+	);
 
 	wp_enqueue_script(
 		'fidato-frontend',
