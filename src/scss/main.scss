@@ -1138,4 +1138,85 @@ body:not(.wp-admin){
             opacity: 0;
         }
     }
+
+
+
+    /* loco animations */
+
+.loco-fade-in{
+    opacity: 0;
+    transition: opacity 3.5s ease;
+}
+
+.loco-fade-in.loco-active{
+    opacity: 1;
+}
+
+
+
+.loco-fade-in-up{
+    opacity: 0;
+    transform: translateY(9rem);
+    transition: opacity 1.5s ease, transform 1.5s ease-in-out;
+}
+
+.loco-fade-in-up.loco-active{
+    opacity: 1;
+    transform: translateY(0rem);
+}
+
+
+
+
+
+// bubble animations
+
+/* Keyframes for the pulsing animation */
+@keyframes subtle-pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  
+  /* Apply the animation to all elements with the .vm-bubble class */
+  .vm-bubble-cluster-wrapper .vm-bubble {
+    animation: subtle-pulse 6s ease infinite;
+    /* Makes the animation smoother */
+    will-change: transform;
+    /* Ensures the animation happens from the center of the element */
+    transform-origin: center center;
+  }
+  
+  /* Add some variation to make the animation more organic */
+  .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n) {
+    animation-delay: 0.5s;
+  }
+  
+  .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n) {
+    animation-delay: 1s;
+  }
+  
+  .vm-bubble-cluster-wrapper .vm-bubble:nth-child(5n) {
+    animation-delay: 1.5s;
+  }
+  
+  /* Optional: add different timing for different bubbles to create a more organic feel */
+  .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n+1) {
+    animation-duration: 4.5s;
+  }
+  
+  .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n+1) {
+    animation-duration: 8s;
+  }
+
+
+
+
 }

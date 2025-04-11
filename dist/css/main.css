@@ -737,6 +737,13 @@ body.post-template-default.single-post h3.wp-block-heading:not(.is-style-eyebrow
   inherits: false;
   initial-value: 100%;
 }
+body:not(.wp-admin) {
+  /* loco animations */
+  /* Keyframes for the pulsing animation */
+  /* Apply the animation to all elements with the .vm-bubble class */
+  /* Add some variation to make the animation more organic */
+  /* Optional: add different timing for different bubbles to create a more organic feel */
+}
 body:not(.wp-admin) .overlay--wrap {
   backdrop-filter: grayscale(100) contrast(25%) brightness(185%) sepia(16%);
   --wipe-position: calc(-1 * var(--gradient-length));
@@ -771,6 +778,55 @@ body:not(.wp-admin) .case-study-hero > * {
 body:not(.wp-admin) .case-study-hero.active > * {
   transition: opacity 0.25s ease;
   opacity: 0;
+}
+body:not(.wp-admin) .loco-fade-in {
+  opacity: 0;
+  transition: opacity 3.5s ease;
+}
+body:not(.wp-admin) .loco-fade-in.loco-active {
+  opacity: 1;
+}
+body:not(.wp-admin) .loco-fade-in-up {
+  opacity: 0;
+  transform: translateY(9rem);
+  transition: opacity 1.5s ease, transform 1.5s ease-in-out;
+}
+body:not(.wp-admin) .loco-fade-in-up.loco-active {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+@keyframes subtle-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+body:not(.wp-admin) .vm-bubble-cluster-wrapper .vm-bubble {
+  animation: subtle-pulse 6s ease infinite;
+  /* Makes the animation smoother */
+  will-change: transform;
+  /* Ensures the animation happens from the center of the element */
+  transform-origin: center center;
+}
+body:not(.wp-admin) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n) {
+  animation-delay: 0.5s;
+}
+body:not(.wp-admin) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n) {
+  animation-delay: 1s;
+}
+body:not(.wp-admin) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(5n) {
+  animation-delay: 1.5s;
+}
+body:not(.wp-admin) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n+1) {
+  animation-duration: 4.5s;
+}
+body:not(.wp-admin) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n+1) {
+  animation-duration: 8s;
 }
 
 /*# sourceMappingURL=main.css.map*/
