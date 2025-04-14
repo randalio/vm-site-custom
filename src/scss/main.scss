@@ -1152,35 +1152,35 @@ body div:not(.block-editor){
 
     /* loco animations */
 
-.loco-fade-in{
-    opacity: 0;
-    transition: opacity 2.5s ease;
-}
+    .loco-fade-in{
+        opacity: 0;
+        transition: opacity 2.5s ease;
+    }
 
-.loco-fade-in.loco-active{
-    opacity: 1;
-}
+    .loco-fade-in.loco-active{
+        opacity: 1;
+    }
 
 
 
-.loco-fade-in-up{
-    opacity: 0;
-    transform: translateY(9rem);
-    transition: opacity .5s ease, transform 0.66s ease-out;
-}
+    .loco-fade-in-up{
+        opacity: 0;
+        transform: translateY(9rem);
+        transition: opacity .5s ease, transform 0.66s ease-out;
+    }
 
-.loco-fade-in-up.second{
-    transition-delay: 0.33s;
-}
+    .loco-fade-in-up.second{
+        transition-delay: 0.33s;
+    }
 
-.loco-fade-in-up.third{
-    transition-delay: 0.66s;
-}
+    .loco-fade-in-up.third{
+        transition-delay: 0.66s;
+    }
 
-.loco-fade-in-up.loco-active{
-    opacity: 1;
-    transform: translateY(0rem);
-}
+    .loco-fade-in-up.loco-active{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
 
 
 
@@ -1189,17 +1189,17 @@ body div:not(.block-editor){
 // bubble animations
 
 /* Keyframes for the pulsing animation */
-@keyframes subtle-pulse {
-    0% {
-      transform: scale(1);
+    @keyframes subtle-pulse {   
+        0% {
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.2);
+        }
+        100% {
+        transform: scale(1);
+        }
     }
-    50% {
-      transform: scale(1.2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
 
   
   /* Apply the animation to all elements with the .vm-bubble class */
@@ -1233,9 +1233,15 @@ body div:not(.block-editor){
     animation-duration: 8s;
   }
 
+}
 
-
-
+body div.block-editor{
+    .loco-fade-in,
+    .loco-fade-in-up{
+        opacity: 1;
+        transform: translateY(0rem);
+        transition: unset;
+    }
 }
 
 

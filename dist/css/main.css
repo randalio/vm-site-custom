@@ -838,6 +838,13 @@ body div:not(.block-editor) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n+1
   animation-duration: 8s;
 }
 
+body div.block-editor .loco-fade-in,
+body div.block-editor .loco-fade-in-up {
+  opacity: 1;
+  transform: translateY(0rem);
+  transition: unset;
+}
+
 .kb-off-canvas-inner-wrap {
   backdrop-filter: blur(10px);
 }
