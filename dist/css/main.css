@@ -740,24 +740,24 @@ body.post-template-default.single-post h3.wp-block-heading:not(.is-style-eyebrow
   inherits: false;
   initial-value: 100%;
 }
-body div:not(.block-editor) {
+body.page-template-default {
   /* loco animations */
   /* Keyframes for the pulsing animation */
   /* Apply the animation to all elements with the .vm-bubble class */
   /* Add some variation to make the animation more organic */
   /* Optional: add different timing for different bubbles to create a more organic feel */
 }
-body div:not(.block-editor) .overlay--wrap {
+body.page-template-default .overlay--wrap {
   backdrop-filter: grayscale(100) contrast(25%) brightness(185%) sepia(16%);
   --wipe-position: calc(-1 * var(--gradient-length));
   --gradient-length: 70%;
   -webkit-mask-image: linear-gradient(to top, black var(--wipe-position), transparent calc(var(--wipe-position) + var(--gradient-length)), transparent);
   transition: --wipe-position 750ms cubic-bezier(0, 0.33, 0.66, 1);
 }
-body div:not(.block-editor) .case-study-overlay.active .overlay--wrap {
+body.page-template-default .case-study-overlay.active .overlay--wrap {
   --wipe-position: 100%;
 }
-body div:not(.block-editor) .case-study-overlay {
+body.page-template-default .case-study-overlay {
   position: absolute !important;
   top: 0;
   left: 0;
@@ -770,37 +770,37 @@ body div:not(.block-editor) .case-study-overlay {
   background: transparent;
   z-index: 99;
 }
-body div:not(.block-editor) .case-study-hero {
+body.page-template-default .case-study-hero {
   padding: 0 !important;
   margin: 0 !important;
 }
-body div:not(.block-editor) .case-study-hero > * {
+body.page-template-default .case-study-hero > * {
   opacity: 1;
   transition: opacity 1.25s ease 0.5s;
 }
-body div:not(.block-editor) .case-study-hero.active > * {
+body.page-template-default .case-study-hero.active > * {
   transition: opacity 0.25s ease;
   opacity: 0;
 }
-body div:not(.block-editor) .loco-fade-in {
+body.page-template-default .loco-fade-in {
   opacity: 0;
   transition: opacity 2.5s ease;
 }
-body div:not(.block-editor) .loco-fade-in.loco-active {
+body.page-template-default .loco-fade-in.loco-active {
   opacity: 1;
 }
-body div:not(.block-editor) .loco-fade-in-up {
+body.page-template-default .loco-fade-in-up {
   opacity: 0;
   transform: translateY(9rem);
   transition: opacity 0.5s ease, transform 0.66s ease-out;
 }
-body div:not(.block-editor) .loco-fade-in-up.second {
+body.page-template-default .loco-fade-in-up.second {
   transition-delay: 0.33s;
 }
-body div:not(.block-editor) .loco-fade-in-up.third {
+body.page-template-default .loco-fade-in-up.third {
   transition-delay: 0.66s;
 }
-body div:not(.block-editor) .loco-fade-in-up.loco-active {
+body.page-template-default .loco-fade-in-up.loco-active {
   opacity: 1;
   transform: translateY(0rem);
 }
@@ -815,34 +815,34 @@ body div:not(.block-editor) .loco-fade-in-up.loco-active {
     transform: scale(1);
   }
 }
-body div:not(.block-editor) .vm-bubble-cluster-wrapper .vm-bubble {
+body.page-template-default .vm-bubble-cluster-wrapper .vm-bubble {
   animation: subtle-pulse 6s ease infinite;
   /* Makes the animation smoother */
   will-change: transform;
   /* Ensures the animation happens from the center of the element */
   transform-origin: center center;
 }
-body div:not(.block-editor) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n) {
+body.page-template-default .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n) {
   animation-delay: 0.5s;
 }
-body div:not(.block-editor) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n) {
+body.page-template-default .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n) {
   animation-delay: 1s;
 }
-body div:not(.block-editor) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(5n) {
+body.page-template-default .vm-bubble-cluster-wrapper .vm-bubble:nth-child(5n) {
   animation-delay: 1.5s;
 }
-body div:not(.block-editor) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n+1) {
+body.page-template-default .vm-bubble-cluster-wrapper .vm-bubble:nth-child(3n+1) {
   animation-duration: 4.5s;
 }
-body div:not(.block-editor) .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n+1) {
+body.page-template-default .vm-bubble-cluster-wrapper .vm-bubble:nth-child(2n+1) {
   animation-duration: 8s;
 }
 
 body div.block-editor .loco-fade-in,
 body div.block-editor .loco-fade-in-up {
-  opacity: 1;
-  transform: translateY(0rem);
-  transition: unset;
+  opacity: 1 !important;
+  transform: translateY(0rem) !important;
+  transition: unset !important;
 }
 
 .kb-off-canvas-inner-wrap {

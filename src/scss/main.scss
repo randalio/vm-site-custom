@@ -1091,7 +1091,7 @@ body.post-template-default.single-post{
 // }
     
 
-body div:not(.block-editor){
+body.page-template-default{
 
     .overlay--wrap{
         backdrop-filter:
@@ -1238,9 +1238,9 @@ body div:not(.block-editor){
 body div.block-editor{
     .loco-fade-in,
     .loco-fade-in-up{
-        opacity: 1;
-        transform: translateY(0rem);
-        transition: unset;
+        opacity: 1 !important;
+        transform: translateY(0rem) !important;
+        transition: unset !important;
     }
 }
 
