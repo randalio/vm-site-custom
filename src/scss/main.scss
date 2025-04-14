@@ -230,6 +230,10 @@ $dmSans: "DM Sans", sans-serif;
                 &-primary-button,
                 &-secondary-button{
                     margin-left: 5rem;
+                    @media screen and (max-width: 768px){
+                        margin-left: unset;
+                        margin-bottom: 1.5rem;
+                    }
                 }
             }
             
