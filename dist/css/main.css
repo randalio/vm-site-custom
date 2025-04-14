@@ -595,6 +595,7 @@ footer .widget_block.widget_media_image {
   padding-right: 0;
   padding-top: 0.4rem;
   transition: all 0.25s ease-out;
+  text-decoration: none;
 }
 .wp-block-post-excerpt .wp-block-post-excerpt__more-text:hover > .wp-block-post-excerpt__more-link {
   padding-left: 0;
