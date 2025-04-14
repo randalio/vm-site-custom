@@ -417,7 +417,8 @@ footer .widget_block.widget_media_image {
   width: 100%;
   border-bottom: unset;
 }
-.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox]) {
+.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox]),
+.vm-form_wrapper .gfield .ginput_container textarea {
   border: 0px solid transparent;
   background-color: transparent;
   border-bottom: 2px solid #006778;
@@ -425,7 +426,8 @@ footer .widget_block.widget_media_image {
   box-shadow: unset;
   padding-left: 0;
 }
-.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox])::placeholder {
+.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox])::placeholder,
+.vm-form_wrapper .gfield .ginput_container textarea::placeholder {
   color: #006778;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
@@ -433,11 +435,13 @@ footer .widget_block.widget_media_image {
   text-transform: uppercase;
   transition: all 0.5s ease;
 }
-.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox]):focus {
+.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox]):focus,
+.vm-form_wrapper .gfield .ginput_container textarea:focus {
   outline: none;
   border-bottom: 2px solid #DC8044;
 }
-.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox]):focus::placeholder {
+.vm-form_wrapper .gfield .ginput_container input:not([type=checkbox]):focus::placeholder,
+.vm-form_wrapper .gfield .ginput_container textarea:focus::placeholder {
   color: rgba(0, 0, 0, 0);
 }
 .vm-form_wrapper .gfield .ginput_container input[type=checkbox] {
@@ -522,14 +526,16 @@ footer .widget_block.widget_media_image {
 .vm-form--alt_wrapper .gfield .ginput_container.gform-grid-row {
   gap: 2rem;
 }
-.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]) {
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]),
+.vm-form--alt_wrapper .gfield .ginput_container textarea {
   border: 2px solid #006778;
   background-color: #fff;
   border-radius: 0;
   box-shadow: unset;
   padding-left: 0.5rem;
 }
-.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox])::placeholder {
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox])::placeholder,
+.vm-form--alt_wrapper .gfield .ginput_container textarea::placeholder {
   color: #006778;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
@@ -537,11 +543,13 @@ footer .widget_block.widget_media_image {
   text-transform: uppercase;
   transition: all 0.5s ease;
 }
-.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]):focus {
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]):focus,
+.vm-form--alt_wrapper .gfield .ginput_container textarea:focus {
   outline: none;
   border: 2px solid #DC8044;
 }
-.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]):focus::placeholder {
+.vm-form--alt_wrapper .gfield .ginput_container input:not([type=checkbox]):focus::placeholder,
+.vm-form--alt_wrapper .gfield .ginput_container textarea:focus::placeholder {
   color: rgba(0, 0, 0, 0);
 }
 .vm-form--alt_wrapper .gform_submit_button {

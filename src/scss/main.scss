@@ -544,7 +544,8 @@ p{
             & .ginput_container{
     
     
-                input:not([type="checkbox"]){
+                input:not([type="checkbox"]),
+                textarea{
                     border: 0px solid transparent;
                     background-color: transparent;
                     border-bottom: 2px solid #006778;
@@ -704,7 +705,8 @@ p{
                     }
         
         
-                    input:not([type="checkbox"]){
+                    input:not([type="checkbox"]),
+                    textarea{
                         border: 2px solid #006778;
                         background-color: #fff;
                         //border-bottom: 2px solid #006778;
