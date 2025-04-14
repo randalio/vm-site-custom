@@ -163,6 +163,7 @@ $dmSans: "DM Sans", sans-serif;
                     padding-left: 2.75rem;
                     padding-right: 0;
                     transition: all 0.25s ease-out;
+                    text-decoration: none;
                 }
 
                 &:hover{
@@ -207,6 +208,7 @@ $dmSans: "DM Sans", sans-serif;
                     padding-left: 2.75rem;
                     padding-right: 0;
                     transition: all 0.25s ease-out;
+                    text-decoration: none;
                 }
 
                 &:hover{
@@ -450,6 +452,8 @@ p{
 
     .kb-splide .splide__arrow{
         border: unset;
+        opacity: 1;
+
         & svg{
             display: none;
         }
@@ -1086,7 +1090,7 @@ body.post-template-default.single-post{
 // }
     
 
-body:not(.wp-admin){
+body div:not(.block-editor){
 
     .overlay--wrap{
         backdrop-filter:
@@ -1231,4 +1235,11 @@ body:not(.wp-admin){
 
 
 
+}
+
+
+
+
+.kb-off-canvas-inner-wrap{
+    backdrop-filter: blur(10px);
 }

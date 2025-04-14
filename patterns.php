@@ -131,7 +131,7 @@
 <!-- wp:kadence/rowlayout {"uniqueID":"789_7fa772-0a","columns":1,"colLayout":"equal","firstColumnWidth":0,"secondColumnWidth":0,"thirdColumnWidth":0,"fourthColumnWidth":0,"fifthColumnWidth":0,"sixthColumnWidth":0,"paddingUnit":"rem","inheritMaxWidth":true,"padding":[5,"",null,""],"kbVersion":2,"metadata":{"name":"Related Posts"}} -->
 <!-- wp:kadence/column {"borderWidth":["","","",""],"uniqueID":"789_794acc-27","kbVersion":2} -->
 <div class="wp-block-kadence-column kadence-column789_794acc-27"><div class="kt-inside-inner-col"><!-- wp:heading {"textAlign":"center","className":"is-style-eyebrow-rainbow","style":{"spacing":{"margin":{"bottom":"5rem"}}}} -->
-<h2 class="wp-block-heading has-text-align-center is-style-eyebrow-rainbow" style="margin-bottom:5rem">Related Posts</h2>
+<h2 class="wp-block-heading has-text-align-center is-style-eyebrow-rainbow" style="margin-bottom:5rem">Related Insights</h2>
 <!-- /wp:heading -->
 
 <!-- wp:kadence/query {"uniqueID":"789_175696-48","id":766} /--></div></div>
