@@ -756,6 +756,7 @@ body.page-template-default {
     width: 100% !important;
     transition: height 0.25s ease-in-out;
     height: 100%;
+    pointer-events: none;
     padding: 0 !important;
     margin: 0 !important;
     background: transparent;

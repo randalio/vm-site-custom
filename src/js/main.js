@@ -93,24 +93,6 @@ class VinylPluginJS {
                 // header.classList.add('has-logo');
 
 
-                // Prevent hashtag links from scrolling and updating URL
-                document.addEventListener('click', function(event) {
-                    // Check if clicked element is a link with a hash
-                    const target = event.target.closest('a');
-                    if (target && target.hash && target.hash.length > 1) {
-                    // Prevent default anchor behavior
-                    event.preventDefault();
-                    
-                    // If you still want the link to do something else, you can add custom code here
-                    // For example, trigger a function or toggle content visibility
-                    
-                    console.log('Hashtag link clicked, but scroll prevented:', target.hash);
-                    }
-                });
-
-
-
-
                 const sections = document.querySelectorAll('.entry-content > .wp-block-kadence-rowlayout');
 
                 sections.forEach((section, index) => {
@@ -127,7 +109,7 @@ class VinylPluginJS {
                   multiplier: 0.8, // Multiplier for scroll speed
                   scrollFromAnywhere: true
                 });
-                
+
 
                 var caseStudyOverlay = document.getElementById('caseStudyOverlay');
                 var caseStudyHero = document.getElementById('caseStudyHero');
