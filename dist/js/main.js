@@ -151,7 +151,7 @@ var VinylPluginJS = /*#__PURE__*/function () {
               //
               var scrollY = obj.scroll.y;
               if (scrollY > 32) {
-                console.log(obj.scroll.y);
+                // console.log(obj.scroll.y);
                 if (!caseStudyOverlay.classList.contains('active')) {
                   caseStudyOverlay.classList.add('active');
                   caseStudyHero.classList.add('active');
