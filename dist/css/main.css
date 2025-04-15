@@ -844,6 +844,9 @@ footer {
   position: relative;
 }
 @media screen and (max-width: 1024px) {
+  footer .site-top-footer-inner-wrap.site-footer-row .site-footer-top-section-2 ul {
+    align-items: flex-end;
+  }
   footer .site-top-footer-inner-wrap.site-footer-row.site-footer-row-columns-2 {
     display: flex;
     justify-content: space-between;

@@ -1205,6 +1205,16 @@ body div.block-editor{
 
     @media screen and (max-width: 1024px){
 
+
+        .site-top-footer-inner-wrap.site-footer-row{
+            & .site-footer-top-section-2{
+                ul{
+                    align-items: flex-end;
+                }
+            }
+        }
+
+
         .site-top-footer-inner-wrap.site-footer-row.site-footer-row-columns-2{
             //grid-template-columns: 2fr;
             display: flex;
