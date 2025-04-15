@@ -1069,6 +1069,7 @@ body.page-template-default{
             & > *{
                 transition: opacity 0.25s ease;
                 opacity: 0;
+                pointer-events: all;
             }
         }
     }
