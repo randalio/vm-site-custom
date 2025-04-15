@@ -288,6 +288,17 @@ p.is-style-category {
   font-weight: 400;
 }
 
+header.vm-main-header--dark svg {
+  filter: drop-shadow(0 0 16px #ECE8E2) drop-shadow(0 0 8px #ECE8E2);
+}
+
+header.vm-main-header--dark .wp-block-kadence-off-canvas-trigger {
+  overflow: visible;
+}
+header.vm-main-header--dark .wp-block-kadence-off-canvas-trigger svg {
+  filter: drop-shadow(0 0 10px #ECE8E2) drop-shadow(0 0 8px #ECE8E2) drop-shadow(0 0 4px #ECE8E2);
+}
+
 .is-style-justify-center-xy.wp-container-core-group-is-layout-1 {
   align-items: center;
   justify-items: center;
@@ -745,7 +756,6 @@ body.page-template-default {
     width: 100% !important;
     transition: height 0.25s ease-in-out;
     height: 100%;
-    pointer-events: none;
     padding: 0 !important;
     margin: 0 !important;
     background: transparent;
@@ -762,7 +772,7 @@ body.page-template-default {
   body.page-template-default .case-study-hero.active > * {
     transition: opacity 0.25s ease;
     opacity: 0;
-    pointer-events: all;
+    pointer-events: all !important;
   }
 }
 @media screen and (max-width: 1024px) {

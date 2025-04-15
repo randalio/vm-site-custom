@@ -355,6 +355,55 @@ p{
 }
 
 
+header.vm-main-header--dark svg{
+    filter: drop-shadow( 0 0 16px #ECE8E2 ) drop-shadow( 0 0 8px #ECE8E2 );
+    //filter: invert(100%);
+    // mix-blend-mode: multiply;
+    // & *{
+    //     mix-blend-mode: multiply;
+    // }
+}
+
+header.vm-main-header--dark .wp-block-kadence-off-canvas-trigger{
+    overflow: visible;
+
+    & svg{
+        filter: drop-shadow( 0 0 10px #ECE8E2 ) drop-shadow( 0 0 8px #ECE8E2 ) drop-shadow( 0 0 4px #ECE8E2 );
+        
+    }
+}
+
+// .white > svg{
+//     fill: #fff;
+//     & > *{
+//         fill: #fff;
+//     }
+// }
+
+
+// .wp-block-kadence-header-desktop.has-logo{
+//     //position: relative;
+//     & > svg{
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         z-index: 9;
+//         left: 50%;
+//         top: 50%;
+//         transform: translateY(-50%) translateX(-50%);
+        
+
+//         & path{
+//             fill: #fff;
+//             //mix-blend-mode: difference;
+//         }
+        
+
+//     }
+// }
+
+
+
 
 
 
@@ -1047,7 +1096,7 @@ body.page-template-default{
             width: 100% !important;
             transition: height 0.25s ease-in-out;
             height: 100%;
-            pointer-events: none;
+            // pointer-events: none;
             padding: 0 !important;
             margin: 0 !important;
             background: transparent;
@@ -1069,7 +1118,7 @@ body.page-template-default{
             & > *{
                 transition: opacity 0.25s ease;
                 opacity: 0;
-                pointer-events: all;
+                pointer-events: all !important;
             }
         }
     }

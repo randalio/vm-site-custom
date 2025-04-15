@@ -97,6 +97,14 @@ var VinylPluginJS = /*#__PURE__*/function () {
         }
         var loco = document.querySelectorAll('.locomotive');
         if (loco.length > 0) {
+          // const logo = document.querySelector('.svg-logo-dark').innerHTML;
+          //              document.querySelector('.svg-logo-dark').innerHTML = '';
+
+          // let header =  document.querySelector('.wp-block-kadence-header-desktop');
+          // // add logo to header at end of header
+          // header.insertAdjacentHTML('beforeend', logo);
+          // header.classList.add('has-logo');
+
           var sections = document.querySelectorAll('.entry-content > .wp-block-kadence-rowlayout');
           sections.forEach(function (section, index) {
             section.setAttribute('data-scroll-section', '');
@@ -118,6 +126,13 @@ var VinylPluginJS = /*#__PURE__*/function () {
           //console.log(caseStudyOverlay.length);
 
           if (caseStudyOverlay) {
+            // // set all svgs in header to white
+            // const headerSvgs = document.querySelectorAll('svg path');
+            // console.log(headerSvgs);
+            // headerSvgs.forEach((svg) => {
+            //     svg.setAttribute('fill', '#ECE8E2');
+            // });
+
             scroll.on('scroll', function (obj) {
               //
               var scrollY = obj.scroll.y;
@@ -126,11 +141,17 @@ var VinylPluginJS = /*#__PURE__*/function () {
                 if (!caseStudyOverlay.classList.contains('active')) {
                   caseStudyOverlay.classList.add('active');
                   caseStudyHero.classList.add('active');
+                  // headerSvgs.forEach((svg) => {
+                  //     svg.setAttribute('fill', '#333333');
+                  // });
                 }
               } else {
                 if (caseStudyOverlay.classList.contains('active')) {
                   caseStudyOverlay.classList.remove('active');
                   caseStudyHero.classList.remove('active');
+                  // headerSvgs.forEach((svg) => {
+                  //     svg.setAttribute('fill', '#ECE8E2');
+                  // });
                 }
               }
             });
