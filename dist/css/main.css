@@ -299,7 +299,7 @@ header.vm-main-header--dark .wp-block-kadence-off-canvas-trigger svg {
   filter: drop-shadow(0 0 10px #ECE8E2) drop-shadow(0 0 8px #ECE8E2) drop-shadow(0 0 4px #ECE8E2);
 }
 
-.is-style-justify-center-xy.wp-container-core-group-is-layout-1 {
+.is-style-justify-center-xy.wp-block-group-is-layout-grid {
   align-items: center;
   justify-items: center;
   row-gap: 5.25rem;
@@ -307,14 +307,14 @@ header.vm-main-header--dark .wp-block-kadence-off-canvas-trigger svg {
   display: grid;
 }
 @media screen and (max-width: 1024px) {
-  .is-style-justify-center-xy.wp-container-core-group-is-layout-1 {
+  .is-style-justify-center-xy.wp-block-group-is-layout-grid {
     row-gap: 2.25rem;
     gap: 2.25rem;
     grid-template-columns: repeat(auto-fill, minmax(min(9rem, 100%), 1fr));
   }
 }
 @media screen and (max-width: 450px) {
-  .is-style-justify-center-xy.wp-container-core-group-is-layout-1 {
+  .is-style-justify-center-xy.wp-block-group-is-layout-grid {
     row-gap: 1.5rem;
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fill, minmax(min(5rem, 100%), 1fr));
